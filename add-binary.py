@@ -7,16 +7,13 @@ class Solution:
         while carry or pa >= 0 or pb >= 0:
             total = carry
             if pa >= 0:
-                total += a[pa]
+                total += int(a[pa])
                 pa -= 1
 
             if pb >= 0:
-                total += b[pb]
+                total += int(b[pb])
                 pb -= 1
             result.append(str(total % 2))
             carry = total // 2
 
         return "".join(reversed(result))
-
-    # result = ['0','0','1']
-    # carry = 0
