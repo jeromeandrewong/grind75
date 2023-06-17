@@ -21,11 +21,11 @@ class Solution:
             inOrder(root.left)
 
             # push current node after left handled
-            arr.push(root)
+            arr.append(root.val)
 
             # check if there is right node to handle
             inOrder(root.right)
 
         inOrder(root)
         # final array must be sorted with no duplicates
-        return True if arr == list(sorted(set(root))) else False
+        return True if arr == list(sorted(set(arr))) else False
